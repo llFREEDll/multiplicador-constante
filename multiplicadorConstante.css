@@ -8,8 +8,12 @@
 
 }
 body{
-    background:url(bg9.jpg);
+    background:url(bg9.jpg)no-repeat center center fixed;
+    -webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
     background-size: cover;
+    
 }
 .bar{
     margin-left:100px;
@@ -20,6 +24,7 @@ body{
     background: #76def3;
     text-align: center;
     color: white;
+    
     
 }
 .txt{
@@ -43,6 +48,8 @@ body{
     margin-right: 100px;
 }
 .lbl{
+    display: flex;
+    justify-content: center;
     margin-top: 10px;
     margin-right: 20px;
     font-size: 25px;
