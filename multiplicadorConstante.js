@@ -113,9 +113,11 @@ function Evaluate(){
             
         }
         
-
+        tb.className = "table table-dark"
         //creando la tabla para mostrar los datos//
         //var table = document.createElement('table');
+        
+        var thead = document.createElement('thead'); 
         var tr = document.createElement('tr'); 
 
         var i = document.createElement('th');
@@ -141,9 +143,11 @@ function Evaluate(){
         tr.appendChild(a);
         tr.appendChild(xi);
         tr.appendChild(ri);
-
-        tb.appendChild(tr);
-
+        
+        thead.appendChild(tr);
+        tb.appendChild(thead);
+        
+        var tbody = document.createElement('tbody');
         for (var i = 0; i < n; i++){
             tr = document.createElement('tr');   
 
@@ -171,8 +175,9 @@ function Evaluate(){
             tr.appendChild(td4);
             tr.appendChild(td5);
 
-            tb.appendChild(tr);
+            tbody.appendChild(tr);
         }
+        tb.appendChild(tbody);
     }else 
         alert('Hay algo mal con las entradas de datos');
 }

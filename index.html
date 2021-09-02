@@ -3,30 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="multiplicadorConstante.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <title>Multiplicador Constante</title>
 </head>
 <body>
-    <div class="bar" >
-            <label>MULTIPLICADOR CONSTANTE</label>
+    <div class="bar container my-5">
+            <h1>MULTIPLICADOR CONSTANTE</h1>
     </div>
-    <div class="txt">
-        <label class="lbl">ingresa la semilla</label>
-        <input id="semilla" class="text">
+    <div class="txt container">
+        <div class="row  g-2 py-3 mx-5">
+            <div class="col-6 text-white">
+              <label for="semilla" class="col-form-label">Ingresa la semilla</label>
+            </div>
+            <div class="col-6">
+              <input type="number" id="semilla" class="form-control">
+            </div>
+        </div>
     </div>
-    <div class="txtm">
-        <label class="lbl">ingresa la constante</label>
-        <input id="constante" class="text">
+    <div class="txtm container">
+        <div class="row  g-2 py-3 mx-5">
+            <div class="col-6 text-white">
+              <label for="semilla" class="col-form-label">Ingresa la constante</label>
+            </div>
+            <div class="col-6">
+              <input type="number" id="constante" class="form-control">
+            </div>
+        </div>
     </div>
-    <div class="txtm">
-        <label class="lbl">ingresa n</label>
-        <input id="n" class="text">
+    <div class="txtm container">
+        <div class="row  g-2 py-3 mx-5">
+            <div class="col-6 text-white">
+              <label for="semilla" class="col-form-label">Ingresa n</label>
+            </div>
+            <div class="col-6">
+              <input type="number" id="n" class="form-control">
+            </div>
+        </div>
     </div>
-    <div class="btn01">
-        <button class="btn1" onclick="Evaluate()">Evaluar</button>          
+    <div class="btn01 container py-5 text-center">
+        <button class="btn btn-outline-light btn-lg" onclick="Evaluate()">Evaluar</button>          
     </div>
-    <div class="result">
-        <table id="table" class="lbl1"></table>
+    <div class="result container text-center ">
+        <table id="table" class="lbl1 "></table>
     </div>
+
+    <div class="my-5 container about py-5">
+        <div class="container text-white">
+            <h2>¿CÓMO FUNCIONA?</h2>
+            <p>Es un algoritmo de números pseudoaleatorios, es utilizado, por ejemplo, en videojuegos de cartas para que el jugador obtenga cartas de manera aleatoria, también se suele usar en juegos de apuestas en general, para tirar dados y que el valor sea diferente cada vez, es un algoritmo muy útil aunque no es el único algoritmo capaz de generar números pseudoaleatorios </p>
+            <br/>
+            <p>Recibe tres entradas de valores:</p>
+            <ul>
+                <li>Semilla: un valor inicial que debe ser de longitud mayo a tres, por ejemplo 363</li>
+                <li>Constante: un valor con la misma longitud que la semilla, si la semilla es de longitud 3 la constante debe ser del mismo tamaño</li>
+                <li>N: el número de veces que quieres que genere un número pseudoaleatorio, si ingresas 5 devolverá 5 números pseudoaleatorios, es decir es el número de iteraciones que quieres realizar</li>
+            </ul>
+            <p>Si quieres conocer a fondo el algoritmo te invito a revisar el siguiente <a href="https://prezi.com/ocwnu9wehquy/metodo-de-multiplicador-constante/" target="_blank" rel="noreferrer noopener" class="text-white">Prezi</a> </p>
+        </div>
+        
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
     <script src="multiplicadorConstante.js"></script>
 </body>
 </html>
